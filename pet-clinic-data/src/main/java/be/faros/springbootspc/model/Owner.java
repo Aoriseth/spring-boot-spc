@@ -1,5 +1,5 @@
 package be.faros.springbootspc.model;
 
-class Owner extends Person {
+public class Owner extends Person {
 
 }
