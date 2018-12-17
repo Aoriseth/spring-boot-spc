@@ -44,7 +44,7 @@
 	</build>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github.com:LennartCockx/spring-boot-spc.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:LennartCockx/spring-boot-spc.git</developerConnection>
 		<tag>spring-boot-spc-0.0.5</tag>
 	</scm>
 
