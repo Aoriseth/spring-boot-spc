@@ -4,7 +4,7 @@
 
 	<groupId>be.faros</groupId>
 	<artifactId>spring-boot-spc</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
     <modules>
         <module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
@@ -46,7 +46,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:LennartCockx/spring-boot-spc.git</developerConnection>
-		<tag>spring-boot-spc-0.0.2</tag>
+		<tag>spring-boot-spcr-0.0.2</tag>
 	</scm>
 
 </project>
