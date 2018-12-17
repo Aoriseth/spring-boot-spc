@@ -4,7 +4,7 @@
 
 	<groupId>be.faros</groupId>
 	<artifactId>spring-boot-spc</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
     <modules>
         <module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
