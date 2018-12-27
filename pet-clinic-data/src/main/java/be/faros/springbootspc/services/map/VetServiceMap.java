@@ -1,11 +1,11 @@
 package be.faros.springbootspc.services.map;
 
 import be.faros.springbootspc.model.Vet;
-import be.faros.springbootspc.services.CrudService;
+import be.faros.springbootspc.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
@@ -29,5 +29,10 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudS
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Vet findByLastName(String lastName) {
+        return null;
     }
 }
