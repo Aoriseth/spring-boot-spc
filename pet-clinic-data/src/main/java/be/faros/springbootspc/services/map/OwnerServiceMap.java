@@ -2,9 +2,11 @@ package be.faros.springbootspc.services.map;
 
 import be.faros.springbootspc.model.Owner;
 import be.faros.springbootspc.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
