@@ -13,6 +13,9 @@
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Telephone</th>
         </tr>
         </thead>
         <tbody>
@@ -20,6 +23,9 @@
             <th th:text="${owner.getId()}">1</th>
             <th th:text="${owner.getFirstName()}">John</th>
             <th th:text="${owner.getLastName()}">Doe</th>
+            <th th:text="${owner.getAddress()}">Street</th>
+            <th th:text="${owner.getCity()}">City</th>
+            <th th:text="${owner.getTelephone()}">000000000000</th>
         </tr>
         </tbody>
     </table>
