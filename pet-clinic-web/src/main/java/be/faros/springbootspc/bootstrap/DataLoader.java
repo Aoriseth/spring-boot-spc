@@ -48,12 +48,12 @@ public class DataLoader implements CommandLineRunner {
 
         Pet pet1 = new Pet();
         pet1.setPetType(dog);
-        pet1.setBirthDay(LocalDate.of(1993,5,3));
+        pet1.setBirthDate(LocalDate.of(1993,5,3));
         pet1.setName("Mikiki");
 
         Pet pet2 = new Pet();
         pet2.setPetType(cat);
-        pet2.setBirthDay(LocalDate.of(1997,5,21));
+        pet2.setBirthDate(LocalDate.of(1997,5,21));
         pet2.setName("Sivona");
 
         Specialty spec1 = new Specialty();
