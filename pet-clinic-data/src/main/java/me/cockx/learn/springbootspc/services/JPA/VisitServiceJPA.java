@@ -10,7 +10,7 @@ import java.util.Set;
 
 
 @Service
-@Profile("springbootjpa")
+@Profile("springdatajpa")
 public class VisitServiceJPA implements VisitService {
     private final VisitRepository visitRepository;
 

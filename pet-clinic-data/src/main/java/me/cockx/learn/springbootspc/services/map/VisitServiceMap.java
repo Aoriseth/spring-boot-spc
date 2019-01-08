@@ -2,11 +2,13 @@ package me.cockx.learn.springbootspc.services.map;
 
 import me.cockx.learn.springbootspc.model.Visit;
 import me.cockx.learn.springbootspc.services.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","custommap"})
 public class VisitServiceMap extends AbstractMapService<Visit,Long> implements VisitService {
 
 

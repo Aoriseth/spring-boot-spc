@@ -2,11 +2,13 @@ package me.cockx.learn.springbootspc.services.map;
 
 import me.cockx.learn.springbootspc.model.PetType;
 import me.cockx.learn.springbootspc.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","custommap"})
 public class PetTypeServiceMap extends AbstractMapService<PetType,Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {

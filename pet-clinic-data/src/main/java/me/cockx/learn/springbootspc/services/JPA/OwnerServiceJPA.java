@@ -2,8 +2,6 @@ package me.cockx.learn.springbootspc.services.JPA;
 
 import me.cockx.learn.springbootspc.model.Owner;
 import me.cockx.learn.springbootspc.repositories.OwnerRepository;
-import me.cockx.learn.springbootspc.repositories.PetRepository;
-import me.cockx.learn.springbootspc.repositories.PetTypeRepository;
 import me.cockx.learn.springbootspc.services.OwnerService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -14,15 +12,10 @@ import java.util.Set;
 @Profile("springdatajpa")
 public class OwnerServiceJPA implements OwnerService {
     private final OwnerRepository ownerRepository;
-    private final PetRepository petRepository;
-    private final PetTypeRepository petTypeRepository;
 
-    public OwnerServiceJPA(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
+    public OwnerServiceJPA(OwnerRepository ownerRepository) {
         this.ownerRepository = ownerRepository;
-        this.petRepository = petRepository;
-        this.petTypeRepository = petTypeRepository;
     }
-
 
     @Override
     public Owner findByLastName(String lastName) {
