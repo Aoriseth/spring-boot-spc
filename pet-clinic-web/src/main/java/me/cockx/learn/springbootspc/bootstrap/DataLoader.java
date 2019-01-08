@@ -1,10 +1,7 @@
 package me.cockx.learn.springbootspc.bootstrap;
 
 import me.cockx.learn.springbootspc.model.*;
-import me.cockx.learn.springbootspc.services.OwnerService;
-import me.cockx.learn.springbootspc.services.PetTypeService;
-import me.cockx.learn.springbootspc.services.SpecialtyService;
-import me.cockx.learn.springbootspc.services.VetService;
+import me.cockx.learn.springbootspc.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -19,13 +16,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
     @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petService1, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petService1, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petService = petService1;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -88,7 +87,15 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
         ownerService.save(owner2);
-        System.out.println("Loading Owners");
+        System.out.println("Loading Owners...");
+
+        Visit visit1 = new Visit();
+        visit1.setPet(pet1);
+        visit1.setLocalDate(LocalDate.MAX);
+        visit1.setDescription("Regular checkup at the Veterinary at the end of the universe.");
+        visitService.save(visit1);
+        System.out.println("Loading Visits...");
+
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Minne");
@@ -103,6 +110,6 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(vet1);
         vetService.save(vet2);
-        System.out.println("Loading Vets");
+        System.out.println("Loading Vets...");
     }
 }
