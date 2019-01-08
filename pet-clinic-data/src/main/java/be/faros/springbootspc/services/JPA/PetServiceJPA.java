@@ -11,11 +11,11 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class PetJPAService implements PetService {
+public class PetServiceJPA implements PetService {
 
     private final PetRepository petRepository;
 
-    public PetJPAService(PetRepository petRepository) {
+    public PetServiceJPA(PetRepository petRepository) {
         this.petRepository = petRepository;
     }
 
