@@ -66,6 +66,7 @@ public class DataLoader implements CommandLineRunner {
         spec2 = specialtyService.save(spec2);
         spec3 = specialtyService.save(spec3);
 
+
         Owner owner1 = new Owner();
         owner1.setFirstName("John");
         owner1.setLastName("Machigan");
